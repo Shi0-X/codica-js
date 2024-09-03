@@ -1,12 +1,11 @@
 // tests/capitalize.test.js
+import assert from 'assert';
 import capitalize from '../src/capitalize.js';
 
-if (capitalize('hello') !== 'Hello') {
-  throw new Error('¡La función no funciona correctamente para "hello"!');
-}
+// Prueba para una cadena normal
+assert.strictEqual(capitalize('hello'), 'Hello', '¡La función no funciona correctamente para "hello"!');
 
-if (capitalize('') !== '') {
-  throw new Error('¡La función no funciona correctamente para una cadena vacía!');
-}
+// Prueba para una cadena vacía
+assert.strictEqual(capitalize(''), '', '¡La función no funciona correctamente para una cadena vacía!');
 
 console.log('¡Todas las pruebas han pasado!');
